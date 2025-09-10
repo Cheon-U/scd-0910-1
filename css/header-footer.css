@@ -1,0 +1,141 @@
+/* header */
+header{
+    box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+header .inner{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width:242px;
+    /* svg는 부모가 사이즈가 있으면 같이 바뀌는데, 아닌 이상 이미지에 크기를 따로 설정해야 한다. */
+}
+
+.main-menu{
+    display:flex;
+    gap:8rem;
+}
+
+.main-menu>li{
+    position:relative;
+}
+
+.main-menu>li>a{
+    display:block;
+    font-size:2rem;
+    line-height:70px;
+}
+
+.main-menu>li:hover>a{
+    color:var(--main-color);
+}
+
+.main-menu>li::after{
+    content:"";
+    display:block;
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:0%;
+    height:2px;
+    background: var(--main-color);
+    transition:0.4s;
+}
+
+.main-menu>li:hover::after{
+    width:100%;
+}
+.depth1{
+    position:absolute;
+    font-size:var(--text-size);
+    background:pink;
+    line-height:1.8;
+    top:68px;
+}
+
+.gnb-wrap{
+    display:flex;
+    gap:1.6rem;
+}
+
+.gnb-wrap .lang-wrap .lang{
+    position:relative;
+}
+
+.gnb-wrap .lang-wrap .lang>a{
+    font-size:var(--text-size);
+    background: url(../images/icon-down.svg) no-repeat 100% center;
+    padding-right:30px;
+    display:flex;
+    align-items:center;
+}
+
+.gnb-wrap .lang-wrap .lang>a.active{
+    background: url(../images/icon-up.svg) no-repeat 100% center;
+}
+.gnb-wrap .lang-wrap .lang>a .lang-change{}
+
+.gnb-wrap .lang-wrap .lang-list{
+    /* display:none; */
+    position:absolute;
+    background:#fff;
+    border-radius:10px;
+    font-size:1.4rem;
+    padding:12px;
+    width:88.77px;
+    line-height:1.8;
+    text-align: center;
+    top:48px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.15);    
+}
+
+.gnb-wrap .gnb-list{
+    display:flex;
+    gap:1.6rem;
+}
+
+/* footer */
+footer{}
+
+footer .inner{
+    max-width:1700px;
+    background:#636363;
+    border-radius:var(--large-radius) var(--large-radius) 0 0;
+    padding:50px 110px; 
+    display:flex;
+    justify-content: space-between;
+    font-size:var(--text-size);
+    color:#f1f1f1;
+    font-weight:200;
+}
+
+.footer-left address{
+    margin:3rem 0 2rem 0;
+}
+
+.footer-left .custom-center{
+    margin-top: 3rem;
+    font-weight:500;
+}
+
+.footer-right{
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between;
+}
+
+.footer-right>ul{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.footer-right .footer-menu{
+    gap:5rem;
+}
+
+.footer-right .sns-list img{
+    width:42px;
+}
